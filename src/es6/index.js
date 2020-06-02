@@ -1,4 +1,4 @@
-// INICIO Default Params //
+// CLASE 2 INICIO Default Params //
 //Como se hacia antes de ECS6
 function newFunction(name, age, country){
 
@@ -31,4 +31,41 @@ let epicPhrase = hello + ' '+world;
 let epicPhraseTwo = `${hello} ${world}`;
 console.log(epicPhraseTwo);
 
-// FIN CONCATENACIÓN//
+// FIN CLASE 2//
+
+// CLASE 3 INICIO Multilinea. Desestructuración. Operador expansión //
+//Como se hacia antes de ECS6
+
+let lorem = "Lorem ipsum dolor sit amet, consectetur \n" 
++ "adipiscing elit.";
+console.log(lorem)
+
+let person = {
+    'name': 'sebastian',
+    'age': 25,
+    'country': 'CO'
+}
+console.log(person.name, person.age, person.country)
+
+//En el caso del operador expansión no existia, cada elemento se agregaba uno por uno
+//Con ECS6
+
+let loremTwo = `Lorem ipsum dolor sit amet, consectetur
+adipiscing elit.`
+console.log(loremTwo)
+
+let personTwo = {
+    'name': 'sebastian',
+    'age': 25,
+    'country': 'CO'
+}
+let {name, age, country} = personTwo;
+console.log(name, age, country);
+
+let teamOne = ['Oscar', 'Julian', 'Ricardo'];
+let teamTwo = ['Camila', 'Juliana', 'Yesica'];
+let education = ['David', ...teamOne, ...teamTwo];//Agregar un elemento nuevo y los elementos 
+//de los arreglos en uno solo
+console.log(education);
+
+// FIN CLASE 3//
