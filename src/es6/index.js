@@ -109,3 +109,53 @@ helloPromise()
     .catch(error => console.log(error));
 
 // FIN CLASE 4//
+
+// CLASE 5 Clases, Módulos y Generadores //
+//Como se hacia antes de ECS6
+
+//No existia una POO muy bien definida
+//No existia un trabajo con modulos
+//No existian los generadores
+//Con ECS6
+
+class calculator{
+
+    constructor(){
+        //Se asignan variables con scrope global
+        this.valueA = 0;
+        this.valueB = 0;
+    }
+    sum(valueA, valueB){
+
+        this.valueA = valueA;
+        this.valueB = valueB;
+        return this.valueA + this.valueB;
+    }
+}
+
+const calc = new calculator();
+console.log(calc.sum(2,2));
+
+// Se ha importado el modulo(en este caso una constante con una funcion anonima asignada)
+// desde el archivo module.js
+import { hello } from './module';
+
+hello();//Corre en el navegador mas no aqui porque trabajo con Nodejs y esta no
+//es la sintaxis correcta
+
+function* helloWorld(){
+
+    if(true){
+        yield 'Hello';
+    }
+    if(true){
+        yield 'World';
+    }
+}
+
+const generatorHello = helloWorld();
+console.log(generatorHello.next().value);
+console.log(generatorHello.next().value);
+console.log(generatorHello.next().value);
+
+// FIN CLASE 5//
