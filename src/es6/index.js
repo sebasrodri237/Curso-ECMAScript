@@ -69,3 +69,43 @@ let education = ['David', ...teamOne, ...teamTwo];//Agregar un elemento nuevo y 
 console.log(education);
 
 // FIN CLASE 3//
+
+// CLASE 4 Arrow Functions, Promesas y Parámetros en objetos //
+//Como se hacia antes de ECS6
+let name = 'sebastian';
+let age = 25;
+
+obj = { name: name, age: age};
+
+//No hay arrow functions antes de ECS6
+//No hay promesas antes de ECS6
+
+//Con ECS6
+
+objTwo = { name, age};//Se reduce la declaracion y es el mismo resultado
+
+const names = [
+    {name: 'sebastian', age: 25},
+    {name: 'Oscar', age: 32}
+]
+
+let listOfNames = names.map(item => console.log (item.name));
+
+const helloPromise = () =>{
+            //Desde aqui estructura de una promesa
+    return new Promise((resolve, reject) => {
+        if(true){
+            resolve('Hey, se resolvio la promesa')
+        }else{
+            reject('Ups, no se resolvio la promesa')
+        }
+    });
+}
+
+helloPromise()
+    //Obtener la respuesta 
+    .then(response => console.log(response))
+    //Obtener el erro de rechazo o porque no fue correcto
+    .catch(error => console.log(error));
+
+// FIN CLASE 4//
