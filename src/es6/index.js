@@ -159,7 +159,3 @@ console.log(generatorHello.next().value);
 console.log(generatorHello.next().value);
 
 // FIN CLASE 5//
-
-// CLASE 6 Implementaciones en ES7 //
-
-// FIN CLASE 6//
