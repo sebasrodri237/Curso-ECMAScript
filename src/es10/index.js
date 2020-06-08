@@ -1,4 +1,4 @@
-// CLASE 10 ES10 //
+// CLASE 10 ES10 array.flat/flatMap, string.trimStart/trimEnd y Object.fromEntries //
 let array = [1,2,3, [1,2,3, [1,2,3]]];
 array.flat(2);
 console.log(array)
